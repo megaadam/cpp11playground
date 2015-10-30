@@ -1,9 +1,13 @@
+#ifndef CONTAINERS_H_
+#define CONTAINERS_H_
+#ifdef _WIN32
+#define __PRETTY_FUNCTION__ __FUNCSIG__
+#endif
+
 #include <vector>
 #include <map>
 #include <string>
 
-#ifndef CONTAINERS_H_
-#define CONTAINERS_H_
 
 class Containers {
 public:

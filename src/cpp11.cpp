@@ -1,3 +1,7 @@
+#ifdef _WIN32
+#include "stdafx.h"
+#endif
+
 #include <iostream>
 #include "TestItAgainSam.h"
 

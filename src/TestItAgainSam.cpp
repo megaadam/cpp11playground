@@ -31,9 +31,9 @@ void TestItAgainSam::Run() const
 
 	//TestLegacyEnums();
 
-	//TestAsync(); # Pause this pending fix for runtime library glitches
+	TestAsync(); 
 
-	TestMove();
+	//TestMove();
 }
 
 void TestItAgainSam::TestLegacy42() const

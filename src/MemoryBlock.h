@@ -5,6 +5,9 @@
 #include <iomanip>
 #include <algorithm>
 
+#ifdef _WIN32
+#define __PRETTY_FUNCTION__ __FUNCSIG__
+#endif
 #define FUNC std::setw(64) << __PRETTY_FUNCTION__ << "   | "
 
 class MemoryBlock

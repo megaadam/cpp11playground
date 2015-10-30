@@ -1,5 +1,8 @@
 #ifndef LEGACYFORTYTWO_H_
 #define LEGACYFORTYTWO_H_
+#ifdef _WIN32
+#define __PRETTY_FUNCTION__ __FUNCSIG__
+#endif
 
 #include <string>
 

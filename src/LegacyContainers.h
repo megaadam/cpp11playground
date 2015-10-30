@@ -1,9 +1,14 @@
+#ifndef LEGACYCONTAINERS_H_
+#define LEGACYCONTAINERS_H_
+#ifdef _WIN32
+#define __PRETTY_FUNCTION__ __FUNCSIG__
+#pragma warning(disable : 4996)
+#endif
+
 #include "vector"
 #include "string"
 #include <iostream>
 
-#ifndef LEGACYCONTAINERS_H_
-#define LEGACYCONTAINERS_H_
 
 class LegacyContainers {
 public:

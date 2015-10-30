@@ -1,5 +1,8 @@
 #ifndef FORTYTWO_H_
 #define FORTYTWO_H_
+#ifdef _WIN32
+#define __PRETTY_FUNCTION__ __FUNCSIG__
+#endif
 
 #include <string>
 

@@ -33,9 +33,12 @@ void Async::GetForecasts() const
 
 int Async::GetCityForecast( const std::string& city )
 {
-	std::srand((int)&city);
+	auto seed = reinterpret_cast<const __int64_t>(&city);
+	std::srand(seed);
+
+	// Fake calulation time
 	int delay = 2 + std::rand() % 8;
-	std::this_thread::sleep_for (std::chrono::seconds(delay));
+	std::this_thread::sleep_for(std::chrono::seconds(delay));
 
 	int temperature = -5 + std::rand() % 40;
 	return temperature;

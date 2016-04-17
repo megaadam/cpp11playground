@@ -42,7 +42,7 @@ void TestItAgainSam::Run() const
 	//TestAsync(); 
 
 	//TestMove();
-	std::this_thread::sleep_for(std::chrono::seconds(30));
+	//std::this_thread::sleep_for(std::chrono::seconds(30));
 
 }
 
@@ -143,7 +143,9 @@ void TestItAgainSam::TestMove() const
 	std::vector<MemoryBlock> vec;
 
 	vec.push_back(MemoryBlock(2000));
+	std::cout << " === " << std::endl;
 	vec.insert(vec.begin(), MemoryBlock(1000));
+	std::cout << " === " << std::endl;
 
 	std::cout << "Exit test: " << __PRETTY_FUNCTION__ << std::endl;
 }

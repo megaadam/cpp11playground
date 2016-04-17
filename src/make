@@ -1,1 +1,4 @@
+# You probably need to do this:
+# module add clang/3.7.0
+
 clang++ -std=c++14 -o cpp11 -pthread *.cpp

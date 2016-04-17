@@ -7,6 +7,7 @@ public:
 	virtual ~TestItAgainSam();
 
 	void Run() const;
+	void TestHeaderInit() const;
 
 	void TestLegacyContainers() const;
 	void TestContainers() const;

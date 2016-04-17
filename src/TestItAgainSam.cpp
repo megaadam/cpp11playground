@@ -2,6 +2,8 @@
 #include <vector>
 #include <string>
 
+#include "HeaderInit.h"
+
 #include "LegacyContainers.h"
 #include "Containers.h"
 
@@ -23,6 +25,8 @@ TestItAgainSam::~TestItAgainSam() {}
 
 void TestItAgainSam::Run() const
 {
+	TestHeaderInit();
+
 	//TestLegacyContainers();
 	//TestContainers();
 
@@ -32,11 +36,27 @@ void TestItAgainSam::Run() const
 	//TestLegacyEnums();
 	//TestEnums();
 
-	TestAsync(); 
+	//TestAsync(); 
 
 	//TestMove();
 
 	_sleep(50000);
+}
+
+void TestItAgainSam::TestHeaderInit() const
+{
+	std::cout << std::endl;
+	std::cout << __PRETTY_FUNCTION__ << std::endl;
+	std::cout << "========================================" << std::endl;
+	{
+		HeaderInit hi(1000, 2000, 3000);
+		hi.PrintMembers();
+	}
+
+	{
+		HeaderInit hi(1000);
+		hi.PrintMembers();
+	}
 }
 
 void TestItAgainSam::TestLegacyContainers() const

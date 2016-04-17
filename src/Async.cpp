@@ -34,6 +34,8 @@ void Async::GetForecasts() const
 
 int Async::GetCityForecast( const std::string& city )
 {
+	//std::srand(std::time(0)); // use current time as seed for random generator
+
 	// Fake calulation time
 	int delay = 2 + std::rand() % 6;
 	std::this_thread::sleep_for(std::chrono::seconds(delay));
@@ -41,3 +43,5 @@ int Async::GetCityForecast( const std::string& city )
 	int temperature = -5 + std::rand() % 40;
 	return temperature;
 }
+
+// True random lovers go here: http://en.cppreference.com/w/cpp/numeric/random

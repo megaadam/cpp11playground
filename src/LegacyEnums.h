@@ -4,9 +4,9 @@
 #define __PRETTY_FUNCTION__ __FUNCSIG__
 #endif
 
-namespace Colour
+namespace Car
 {
-	enum Colour { RED, GREEN, BLUE };
+	enum Car { RED, GREEN, BLUE };
 }
 
 namespace Wine

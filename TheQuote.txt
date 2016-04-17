@@ -1,0 +1,4 @@
+"Surprisingly, C++11 feels like a new language."
+
+
+http://www.stroustrup.com/C++11FAQ.html#think

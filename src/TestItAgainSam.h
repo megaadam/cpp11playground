@@ -8,6 +8,9 @@ public:
 
 	void Run() const;
 
+	void TestLegacyContainers() const;
+	void TestContainers() const;
+
 	void TestLegacy42() const;
 	void Test42() const;
 

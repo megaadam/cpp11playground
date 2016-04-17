@@ -15,7 +15,7 @@
 
 #include "MemoryBlock.h"
 
-using namespace Colour;
+using namespace Car;
 
 TestItAgainSam::TestItAgainSam() {}
 
@@ -23,17 +23,35 @@ TestItAgainSam::~TestItAgainSam() {}
 
 void TestItAgainSam::Run() const
 {
-	//LegacyContainers cont;
-	//cont.ListCities();
-	//cont.ListCodes();
+	//TestLegacyContainers();
+	//TestContainers();
 
 	//TestLegacy42();
+	//Test42();
 
 	//TestLegacyEnums();
+	//TestEnums();
 
 	TestAsync(); 
 
 	//TestMove();
+
+	_sleep(50000);
+}
+
+void TestItAgainSam::TestLegacyContainers() const
+{
+	LegacyContainers cont;
+	cont.ListCities();
+	cont.ListCodes();
+}
+
+void TestItAgainSam::TestContainers() const
+{
+	Containers cont;
+	cont.ListCities();
+	cont.ListCodes();
+
 }
 
 void TestItAgainSam::TestLegacy42() const
@@ -71,8 +89,14 @@ void TestItAgainSam::Test42() const
 void TestItAgainSam::TestLegacyEnums() const
 {
 	LegacyEnums le;
+	// Why does this fail ?
 	le.WineTesting(RED);
 }
+
+
+
+
+
 
 void TestItAgainSam::TestEnums() const
 {

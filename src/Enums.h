@@ -10,7 +10,7 @@ public:
 	Enums();
 	virtual ~Enums();
 
-	enum class Colour { RED, GREEN, BLUE };
+	enum class Car { RED, GREEN, BLUE };
 	enum class Wine { WHITE, RED };
 
 	void WineTesting(Wine w) const;

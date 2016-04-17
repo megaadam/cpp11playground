@@ -148,18 +148,19 @@
     <ClInclude Include="..\..\src\Containers.h" />
     <ClInclude Include="..\..\src\Enums.h" />
     <ClInclude Include="..\..\src\FortyTwo.h" />
+    <ClInclude Include="..\..\src\HeaderInit.h" />
     <ClInclude Include="..\..\src\LegacyContainers.h" />
     <ClInclude Include="..\..\src\LegacyEnums.h" />
     <ClInclude Include="..\..\src\LegacyFortyTwo.h" />
     <ClInclude Include="..\..\src\MemoryBlock.h" />
     <ClInclude Include="..\..\src\TestItAgainSam.h" />
-    <ClInclude Include="HeaderInit.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Async.cpp" />
     <ClCompile Include="..\..\src\Containers.cpp" />
+    <ClCompile Include="..\..\src\HeaderInit.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\Enums.cpp" />
     <ClCompile Include="..\..\src\FortyTwo.cpp" />
@@ -168,7 +169,6 @@
     <ClCompile Include="..\..\src\LegacyFortyTwo.cpp" />
     <ClCompile Include="..\..\src\MemoryBlock.cpp" />
     <ClCompile Include="..\..\src\TestItAgainSam.cpp" />
-    <ClCompile Include="HeaderInit.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

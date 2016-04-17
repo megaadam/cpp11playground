@@ -1,6 +1,9 @@
 #include "TestItAgainSam.h"
 #include <vector>
 #include <string>
+#include <chrono>
+#include <ctime>
+#include <thread>
 
 #include "HeaderInit.h"
 
@@ -39,8 +42,8 @@ void TestItAgainSam::Run() const
 	//TestAsync(); 
 
 	//TestMove();
+	std::this_thread::sleep_for(std::chrono::seconds(30));
 
-	_sleep(50000);
 }
 
 void TestItAgainSam::TestHeaderInit() const

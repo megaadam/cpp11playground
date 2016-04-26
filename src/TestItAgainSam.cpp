@@ -28,7 +28,7 @@ TestItAgainSam::~TestItAgainSam() {}
 
 void TestItAgainSam::Run() const
 {
-	TestHeaderInit();
+	//TestHeaderInit();
 
 	//TestLegacyContainers();
 	//TestContainers();
@@ -37,7 +37,7 @@ void TestItAgainSam::Run() const
 	//Test42();
 
 	//TestLegacyEnums();
-	//TestEnums();
+	TestEnums();
 
 	//TestAsync();
 
@@ -150,6 +150,7 @@ void TestItAgainSam::TestEnums() const
 
 	Enums e;
 	e.WineTesting(Enums::Wine::RED);
+	e.TestCast();
 }
 
 void TestItAgainSam::TestAsync() const

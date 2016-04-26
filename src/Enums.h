@@ -10,10 +10,12 @@ public:
 	Enums();
 	virtual ~Enums();
 
-	enum class Car { RED, GREEN, BLUE };
+	enum class Car { RED, GREEN, BLUE = 42 };
 	enum class Wine { WHITE, RED };
 
+	void TestCast() const;
 	void WineTesting(Wine w) const;
+
 };
 
 #endif /* ENUMS_H_ */

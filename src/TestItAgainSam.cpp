@@ -28,7 +28,7 @@ TestItAgainSam::~TestItAgainSam() {}
 
 void TestItAgainSam::Run() const
 {
-	TestHeaderInit();
+	//TestHeaderInit();
 
 	//TestLegacyContainers();
 	//TestContainers();
@@ -37,12 +37,12 @@ void TestItAgainSam::Run() const
 	//Test42();
 
 	//TestLegacyEnums();
-	//TestEnums();
+	TestEnums();
 
-	//TestAsync(); 
+	//TestAsync();
 
 	//TestMove();
-	std::this_thread::sleep_for(std::chrono::seconds(30));
+	//std::this_thread::sleep_for(std::chrono::seconds(30));
 
 }
 
@@ -51,6 +51,7 @@ void TestItAgainSam::TestHeaderInit() const
 	std::cout << std::endl;
 	std::cout << __PRETTY_FUNCTION__ << std::endl;
 	std::cout << "========================================" << std::endl;
+
 	{
 		HeaderInit hi(1000, 2000, 3000);
 		hi.PrintMembers();
@@ -64,6 +65,10 @@ void TestItAgainSam::TestHeaderInit() const
 
 void TestItAgainSam::TestLegacyContainers() const
 {
+	std::cout << std::endl;
+	std::cout << __PRETTY_FUNCTION__ << std::endl;
+	std::cout << "========================================" << std::endl;
+
 	LegacyContainers cont;
 	cont.ListCities();
 	cont.ListCodes();
@@ -71,6 +76,10 @@ void TestItAgainSam::TestLegacyContainers() const
 
 void TestItAgainSam::TestContainers() const
 {
+	std::cout << std::endl;
+	std::cout << __PRETTY_FUNCTION__ << std::endl;
+	std::cout << "========================================" << std::endl;
+
 	Containers cont;
 	cont.ListCities();
 	cont.ListCodes();
@@ -79,6 +88,10 @@ void TestItAgainSam::TestContainers() const
 
 void TestItAgainSam::TestLegacy42() const
 {
+	std::cout << std::endl;
+	std::cout << __PRETTY_FUNCTION__ << std::endl;
+	std::cout << "========================================" << std::endl;
+
 	std::cout << std::endl;
 
 	std::vector<LegacyFortyTwo*> lftVec;
@@ -96,6 +109,10 @@ void TestItAgainSam::TestLegacy42() const
 void TestItAgainSam::Test42() const
 {
 	std::cout << std::endl;
+	std::cout << __PRETTY_FUNCTION__ << std::endl;
+	std::cout << "========================================" << std::endl;
+
+	std::cout << std::endl;
 
 	std::vector<FortyTwo> ftVec = {
 									FortyTwo(),
@@ -111,6 +128,10 @@ void TestItAgainSam::Test42() const
 
 void TestItAgainSam::TestLegacyEnums() const
 {
+	std::cout << std::endl;
+	std::cout << __PRETTY_FUNCTION__ << std::endl;
+	std::cout << "========================================" << std::endl;
+
 	LegacyEnums le;
 	// Why does this fail ?
 	le.WineTesting(RED);
@@ -123,12 +144,21 @@ void TestItAgainSam::TestLegacyEnums() const
 
 void TestItAgainSam::TestEnums() const
 {
+	std::cout << std::endl;
+	std::cout << __PRETTY_FUNCTION__ << std::endl;
+	std::cout << "========================================" << std::endl;
+
 	Enums e;
 	e.WineTesting(Enums::Wine::RED);
+	e.TestCast();
 }
 
 void TestItAgainSam::TestAsync() const
 {
+	std::cout << std::endl;
+	std::cout << __PRETTY_FUNCTION__ << std::endl;
+	std::cout << "========================================" << std::endl;
+
 	Async a;
 	a.GetForecasts();
 }
@@ -140,10 +170,17 @@ void TestItAgainSam::TestMove() const
 //
 //	mb2 = mb1;
 
+	std::cout << std::endl;
+	std::cout << __PRETTY_FUNCTION__ << std::endl;
+	std::cout << "========================================" << std::endl;
+
+
 	std::vector<MemoryBlock> vec;
 
 	vec.push_back(MemoryBlock(2000));
+	std::cout << " === " << std::endl;
 	vec.insert(vec.begin(), MemoryBlock(1000));
+	std::cout << " === " << std::endl;
 
 	std::cout << "Exit test: " << __PRETTY_FUNCTION__ << std::endl;
 }

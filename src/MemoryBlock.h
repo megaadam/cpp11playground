@@ -60,7 +60,7 @@ public:
 //#define cpp11
 #ifdef cpp11
    // NEW: Move constructor
-   MemoryBlock(MemoryBlock&& other): m_pData(nullptr), m_size(0)
+   MemoryBlock(MemoryBlock&& other) noexcept: m_pData(nullptr), m_size(0)
    {
 	   std::cout << FUNC  << "NEW: Don't copy: " << other.m_size << " bytes" << std::endl;
 
@@ -72,7 +72,7 @@ public:
    }
 
    // NEW: Move assignment operator
-   MemoryBlock& operator=(MemoryBlock&& other)
+   MemoryBlock& operator=(MemoryBlock&& other) noexcept
    {
 	   std::cout << FUNC << "Don't copy: " << other.m_size << " bytes" << std::endl;
 
@@ -90,9 +90,8 @@ public:
 		   // the destructor does not free the memory multiple times.
 		   other.m_pData = nullptr;
 		   other.m_size = 0;
-
-		   return *this;
 	   }
+	   return *this;
    }
 #endif
 

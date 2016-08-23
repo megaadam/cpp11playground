@@ -20,6 +20,8 @@
 
 #include "MemoryBlock.h"
 
+#include "Lambdas.h"
+
 using namespace Car;
 
 TestItAgainSam::TestItAgainSam() {}
@@ -37,11 +39,15 @@ void TestItAgainSam::Run() const
 	//Test42();
 
 	//TestLegacyEnums();
-	TestEnums();
+	//TestEnums();
 
-	//TestAsync();
+	TestAsync();
 
 	//TestMove();
+
+	//TestLambdas();
+
+	// This is only to keep the command prompt alive when running inside Visual Studio
 	//std::this_thread::sleep_for(std::chrono::seconds(30));
 
 }
@@ -184,3 +190,14 @@ void TestItAgainSam::TestMove() const
 
 	std::cout << "Exit test: " << __PRETTY_FUNCTION__ << std::endl;
 }
+
+void TestItAgainSam::TestLambdas() const
+{
+	Lambdas l;
+	l.TestAnimals();
+	l.TestCountIf();
+	l.TestCapture();
+
+}
+
+

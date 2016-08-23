@@ -21,6 +21,9 @@ public:
 	void TestAsync() const;
 
 	void TestMove() const;
+
+	void TestLambdas() const;
+	void TestDoubles() const;
 };
 
 #endif /* TESTITAGAINSAM_H_ */

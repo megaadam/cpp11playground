@@ -4,6 +4,7 @@
 #include <chrono>
 #include <ctime>
 #include <thread>
+#include <utility>
 
 #include "HeaderInit.h"
 
@@ -41,11 +42,11 @@ void TestItAgainSam::Run() const
 	//TestLegacyEnums();
 	//TestEnums();
 
-	TestAsync();
+	//TestAsync();
 
 	//TestMove();
 
-	//TestLambdas();
+	TestLambdas();
 
 	// This is only to keep the command prompt alive when running inside Visual Studio
 	//std::this_thread::sleep_for(std::chrono::seconds(30));
@@ -183,7 +184,7 @@ void TestItAgainSam::TestMove() const
 
 	std::vector<MemoryBlock> vec;
 
-	vec.push_back(MemoryBlock(2000));
+	vec.emplace(vec.begin(), 2000);
 	std::cout << " === " << std::endl;
 	vec.insert(vec.begin(), MemoryBlock(1000));
 	std::cout << " === " << std::endl;

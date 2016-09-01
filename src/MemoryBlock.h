@@ -57,7 +57,7 @@ public:
       return *this;
    }
 
-//#define cpp11
+#define cpp11
 #ifdef cpp11
    // NEW: Move constructor
    MemoryBlock(MemoryBlock&& other) noexcept: m_pData(nullptr), m_size(0)

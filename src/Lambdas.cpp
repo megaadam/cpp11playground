@@ -35,11 +35,13 @@ void Lambdas::TestCountIf()
 		std::endl;
 }
 
+
 void Lambdas::TestCapture()
 {
 	int myMoney = 1000;
 	auto addSome = [&myMoney](int addition){ myMoney += addition; };
 	auto multiplySome = [&myMoney](int mult){ myMoney *= mult; };
+	++myMoney;
 	auto printMoney = [myMoney](){ std::cout << "My Money: " << myMoney << std::endl; };
 	// Can you see a bug above?
 
